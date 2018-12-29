@@ -20,13 +20,13 @@ const applyText = (canvas, text) => {
 };
 
 client.on('guildMemberAdd', async member => {
-	const channel = member.guild.channels.find(ch => ch.name === 'general');
+	const channel = member.guild.channels.find(ch => ch.name === '⇛ωεℓcσмε🤗');
 	if (!channel) return;
 
 	const canvas = Canvas.createCanvas(700, 250);
 	const ctx = canvas.getContext('2d');
 
-	const background = await Canvas.loadImage('./wallpaper.jpg');
+	const background = await Canvas.loadImage('./wallpaper.png');
 	ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
 	ctx.strokeStyle = '#74037b';
@@ -68,4 +68,4 @@ client.on('message', async message => {
 	}
 });
 
-client.login('NTE5NDg1NDUzODQ2NDQ2MTEw.DwexXg.HNIQOp_5YN1QV_YgU9pwcBsdw1U');
+client.login(process.env.TOKEN);
